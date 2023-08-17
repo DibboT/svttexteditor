@@ -33,10 +33,12 @@ body .heading{
 
 .options{
     display: flex;
+    flex-wrap:wrap;
+    padding: 20px;
+    text-align: center;
     align-items: center;
-    justify-content: space-around;
     gap: 15px;
-    border: 1px solid red;
+    
 
 }
 
@@ -47,4 +49,10 @@ button{
     background-color: #fff;
     border: none;
     outline: none;
+}
+
+select {
+    padding: 7px;
+    border: 1px solid #020929;
+    border-radius: 3px;
 }

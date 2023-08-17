@@ -1,62 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The SVT Text Editor</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The SVT Text Editor</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 </head>
+
 <body>
-    <section>
-        <h1 class="heading">The SVT Text Editor</h1>
-    </section>
-    <section>
-        <div class="container">
-            <div class="options">
-                <!-- Text Format -->
-                <button id="bold" class="option-button format">
-                  <i class="fa-solid fa-bold"></i>
-                </button>
-                <button id="italic" class="option-button format">
-                  <i class="fa-solid fa-italic"></i>
-                </button>
-                <button id="underline" class="option-button format">
-                  <i class="fa-solid fa-underline"></i>
-                </button>
-                <button id="strikethrough" class="option-button format">
-                  <i class="fa-solid fa-strikethrough"></i>
-                </button>
-                <button id="superscript" class="option-button script">
-                  <i class="fa-solid fa-superscript"></i>
-                </button>
-                <button id="subscript" class="option-button script">
-                  <i class="fa-solid fa-subscript"></i>
-                </button>
-                <!-- List -->
-                <button id="insertOrderedList" class="option-button">
-                  <div class="fa-solid fa-list-ol"></div>
-                </button>
-                <button id="insertUnorderedList" class="option-button">
-                  <i class="fa-solid fa-list"></i>
-                </button>
+  <section>
+    <h1 class="heading">The SVT Text Editor</h1>
+  </section>
+  <section>
+    <div class="container">
+      <div class="options">
+        <!-- Text Format -->
+        <button id="bold" class="option-button format">
+          <i class="fa-solid fa-bold"></i>
+        </button>
+        <button id="italic" class="option-button format">
+          <i class="fa-solid fa-italic"></i>
+        </button>
+        <button id="underline" class="option-button format">
+          <i class="fa-solid fa-underline"></i>
+        </button>
+        <button id="strikethrough" class="option-button format">
+          <i class="fa-solid fa-strikethrough"></i>
+        </button>
+        <button id="superscript" class="option-button script">
+          <i class="fa-solid fa-superscript"></i>
+        </button>
+        <button id="subscript" class="option-button script">
+          <i class="fa-solid fa-subscript"></i>
+        </button>
+        <!-- List -->
+        <button id="insertOrderedList" class="option-button">
+          <div class="fa-solid fa-list-ol"></div>
+        </button>
+        <button id="insertUnorderedList" class="option-button">
+          <i class="fa-solid fa-list"></i>
+        </button>
 
-                <button id="undo" class="option-button">
-                    <i class="fa-solid fa-rotate-left"></i>
-                  </button>
+        <!-- Undo and Redo -->
 
-                 <button id="redo" class="option-button">
-                    <i class="fa-solid fa-rotate-right"></i>
-                  </button>
+        <button id="undo" class="option-button">
+          <i class="fa-solid fa-rotate-left"></i>
+        </button>
+
+        <button id="redo" class="option-button">
+          <i class="fa-solid fa-rotate-right"></i>
+        </button>
+
+        <!-- Link and Unlink Option -->
+
+        <button id="link" class="adv-option-button">
+          <i class="fa-solid fa-link"></i>
+        </button>
+
+        <button id="unlink" class="option-button">
+          <i class="fa-solid fa-link-slash"></i>
+        </button>
+
+        <!-- Align Option -->
+        <button id="left-align" class="option-button-align">
+          <i class="fa-solid fa-align-left"></i>
+        </button>
+        <button id="center-align" class="option-button-align">
+          <i class="fa-solid fa-align-center"></i>
+        </button>
+        <button id="right-align" class="option-button-align">
+          <i class="fa-solid fa-align-right"></i>
+        </button>
+
+        <button id="jsutify-full" class="option-button-align">
+          <i class="fa-solid fa-align-justify"></i>
+        </button>
+
+        <button id="indent" class="option-button-spacing">
+          <i class="fa-solid fa-indent"></i>
+        </button>
+
+        <button id="outdent" class="option-button-spacing">
+          <i class="fa-solid fa-outdent"></i>
+        </button>
+
+        <!--headings-->
+        <select id="formatBlock" class="adv-option-button">
+          <option value="h1">H1</option>
+          <option value="h2">H2</option>
+          <option value="h3">H3</option>
+          <option value="h4">H4</option>
+          <option value="h5">H5</option>
+        </select>
 
 
+        <!--Fonts-->
+        <select id="fontName" class="adv-option-button"></select>
+        <select id="fontSize" class="adv-option-button"></select>
+
+        <div class="input-wrapper">
+          <input type="color" id="fontColor" class="adv-option-button">
+          <label for="foreColor">Font Color</label>
         </div>
+        <div class="input-wrapper">
+          <input type="color" id="backColor" class="adv-option-button" />
+          <label for="backColor">Highlight Color</label>
+        </div>
+      </div>
+      <div id="text-input" contenteditable="true"></div>
+    </div>
+    <!--Script-->
+    <script src="script.js"></script>
 
-    </section>
-    
+
+    </div>
+
+  </section>
+
 </body>
+
 </html>
